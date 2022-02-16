@@ -24,12 +24,17 @@ namespace dotNETBlog.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category obj)
         {
-            if(ModelState.IsValid)
+
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
+                ModelState.AddModelError("name", "The Display Order cannot exactly match the name");
+            }
+            if (ModelState.IsValid) {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
             return View(obj);
 
         }
