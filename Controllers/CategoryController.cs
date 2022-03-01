@@ -11,6 +11,7 @@ namespace dotNETBlog.Controllers
         public IActionResult Index()
         {
             IEnumerable<Category> objCategoryList = _db.Categories;
+
             return View(objCategoryList);
         }
         public IActionResult Create()
@@ -31,6 +32,7 @@ namespace dotNETBlog.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category successfully added!";
                 return RedirectToAction("Index");
             }
 
