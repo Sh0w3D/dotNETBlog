@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotNETBlog.Data;
 
@@ -10,9 +11,10 @@ using dotNETBlog.Data;
 namespace dotNETBlog.Migrations
 {
     [DbContext(typeof(applicationDbContext))]
-    partial class applicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220305184139_AddRequiredTablesNo1")]
+    partial class AddRequiredTablesNo1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,10 +84,6 @@ namespace dotNETBlog.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nick")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("UserCreatedDateTime")
