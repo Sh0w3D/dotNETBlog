@@ -11,8 +11,8 @@ using dotNETBlog.Data;
 namespace dotNETBlog.Migrations
 {
     [DbContext(typeof(applicationDbContext))]
-    [Migration("20220305184139_AddRequiredTablesNo1")]
-    partial class AddRequiredTablesNo1
+    [Migration("20220306140415_UpdateDatabase#2")]
+    partial class UpdateDatabase2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -84,6 +84,10 @@ namespace dotNETBlog.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nick")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<DateTime>("UserCreatedDateTime")

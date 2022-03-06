@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dotNETBlog.Data;
 
@@ -10,9 +11,10 @@ using dotNETBlog.Data;
 namespace dotNETBlog.Migrations
 {
     [DbContext(typeof(applicationDbContext))]
-    partial class applicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220306143001_UpdateDatabase#5")]
+    partial class UpdateDatabase5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
