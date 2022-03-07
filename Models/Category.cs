@@ -11,11 +11,8 @@ namespace dotNETBlog.Models
         public int Id { get; set; }
         [Required]
         public string? Name { get; set; }
-
-        [DisplayName("Display Order")]
-        [MinLength(2, ErrorMessage = "Minimum length is 2 characters!")]
-        [MaxLength(25, ErrorMessage = "Max length is 25 characters!")]
-        public string Nick { get; set; }
+        
+        [Range(1, 100, ErrorMessage = "Values from 1 to 100 range")]
         public int DisplayOrder { get; set; }
 
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;

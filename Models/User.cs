@@ -23,7 +23,6 @@ namespace dotNETBlog.Models
         [RegularExpression("^[a-zA-Z0-9]+$", ErrorMessage = "The nick cannot contain any special character!")]
         public string? Nick { get; set; }
 
-
         public DateTime UserCreatedDateTime { get; set; } = DateTime.Now;
     }
 }

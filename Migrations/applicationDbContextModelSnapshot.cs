@@ -35,11 +35,6 @@ namespace dotNETBlog.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Nick")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("varchar(25)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
