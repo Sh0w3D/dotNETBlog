@@ -3,7 +3,7 @@ Simple blog made with .NET framework and local MySQL database
 
 Up to date list of functionalities:
 1. Add/Edit/Remove category,
-2. Add user
+2. Add/Edit/Remove user (admin).
 
 To-do list:
 1. Edit/Remove user,
