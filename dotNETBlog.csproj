@@ -24,4 +24,11 @@
   <ItemGroup>
     <None Remove="NuGet.CommandLine" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Views\Post\Create.cshtml" />
+    <AdditionalFiles Include="Views\Post\Delete.cshtml" />
+    <AdditionalFiles Include="Views\Post\Edit.cshtml" />
+    <AdditionalFiles Include="Views\Post\Index.cshtml" />
+  </ItemGroup>
 </Project>
