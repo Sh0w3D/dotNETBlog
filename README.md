@@ -3,11 +3,12 @@ Simple blog made with .NET framework and local MySQL database
 
 Up to date list of functionalities:
 1. Add/Edit/Remove category,
-2. Add/Edit/Remove user (admin).
+2. Add/Edit/Remove user (admin),
+3. Add post (admin).
 
 To-do list:
 1. Edit/Remove user,
-2. Add/Edit/Remove post,
+2. Edit/Remove post,
 3. Admin/User registration panel,
 4. Admin/User login panel,
 5. Verification and subscription email,
