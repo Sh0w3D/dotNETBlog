@@ -1,8 +1,11 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace dotNETBlog.Models
 {
+    
+    [Table("user", Schema = "public")]
     public class User
     {
         [Key]
@@ -18,11 +21,11 @@ namespace dotNETBlog.Models
         public string? PasswordHash { get; set; }
 
         [DisplayName("User nickname")]
-        [MinLength(2, ErrorMessage = "Min lenght is 2 characters!")]
-        [MaxLength(25, ErrorMessage = "Max lenght is 25 characters!")]
+        [MinLength(2, ErrorMessage = "Min length is 2 characters!")]
+        [MaxLength(25, ErrorMessage = "Max length is 25 characters!")]
         [RegularExpression("^[a-zA-Z0-9]+$", ErrorMessage = "The nick cannot contain any special character!")]
         public string? Nick { get; set; }
 
-        public DateTime UserCreatedDateTime { get; set; } = DateTime.Now;
+        public DateTime UserCreatedDateTime { get; set; } = DateTime.UtcNow;
     }
 }

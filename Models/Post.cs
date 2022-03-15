@@ -2,9 +2,11 @@
 
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace dotNETBlog.Models
 {
+    [Table("post", Schema = "public")]
     public class Post
     {
         [Key]
@@ -21,9 +23,9 @@ namespace dotNETBlog.Models
         [DataType(DataType.MultilineText)]
         public string Content { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         public bool Published { get; set; } = false;
 

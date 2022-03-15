@@ -1,14 +1,15 @@
 using dotNETBlog.Data;
 using Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var mySqlConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var dbConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<applicationDbContext>(options =>
-    options.UseMySql(mySqlConnectionString, ServerVersion.AutoDetect(mySqlConnectionString)));
+    options.UseNpgsql(dbConnectionString));
 
 
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
