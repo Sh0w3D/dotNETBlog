@@ -22,7 +22,7 @@
             <tr>
                 <th>Post title</th>
                 <th>Post content</th>
-                <th>Post Creation Time</th>
+                <th>Created on</th>
                 <th>Post Author</th>
                 <th></th>
                 <th></th>
@@ -32,8 +32,8 @@
             @foreach(var obj in Model)
             {
                 <tr>
-                    <td width="30%">@obj.Title</td>
-                    <td width="50%">@obj.Content</td>
+                    <td>@obj.Title</td>
+                    <td>@obj.Content</td>
                     <td>@obj.CreatedAt</td>
                     <td>@obj.AuthorID</td>
                     <td>

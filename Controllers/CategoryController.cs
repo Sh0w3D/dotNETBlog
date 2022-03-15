@@ -28,15 +28,12 @@ namespace dotNETBlog.Controllers
             {
                 ModelState.AddModelError("name", "The Display Order cannot exactly match the name");
             }
-            if (ModelState.IsValid)
-            {
-                _db.Categories.Add(obj);
-                _db.SaveChanges();
-                TempData["success"] = "Category successfully added!";
-                return RedirectToAction("Index");
-            }
 
-            return View(obj);
+            if (!ModelState.IsValid) return View(obj);
+            _db.Categories.Add(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Category successfully added!";
+            return RedirectToAction("Index");
 
         }
 
