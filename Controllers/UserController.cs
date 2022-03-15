@@ -43,7 +43,7 @@ namespace dotNETBlog.Controllers
 
         public IActionResult Edit(string? id)
         {
-            if (id == null || id == 0.ToString())
+            if (id == null)
             {
                 return NotFound();
             }

@@ -31,4 +31,37 @@
     <AdditionalFiles Include="Views\Post\Edit.cshtml" />
     <AdditionalFiles Include="Views\Post\Index.cshtml" />
   </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Areas\Identity\Pages\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Home\Privacy.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Shared\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Shared\_LoginPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Views\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\appsettings.json" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\obj\dotNETBlogAuthentication.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="dotNETBlogAuthentication\Properties\launchSettings.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Areas\Identity\Pages\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Home\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Home\Privacy.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Shared\Error.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Shared\_Layout.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Shared\_LoginPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\_ViewImports.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Views\_ViewStart.cshtml" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\appsettings.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\obj\dotNetBlog.Authentication.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\obj\project.packagespec.json" />
+    <_ContentIncludedByDefault Remove="dotNetBlog.Authentication\Properties\launchSettings.json" />
+  </ItemGroup>
 </Project>

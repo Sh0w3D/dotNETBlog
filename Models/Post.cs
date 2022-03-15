@@ -8,7 +8,7 @@ namespace dotNETBlog.Models
     public class Post
     {
         [Key]
-        public int Id { get; set; }
+        public string? Id { get; set; } = Guid.NewGuid().ToString("D");
 
         [Required]
         public string AuthorID { get; set; }

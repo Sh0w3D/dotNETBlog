@@ -39,5 +39,65 @@ namespace dotNETBlog.Controllers
 
             return View(post);
         }
+
+        public IActionResult Edit(string? id)
+        {
+            if (id is null)
+            {
+                return NotFound();
+            }
+
+            var postFromDb = _db.Posts.Find(id);
+
+            if (postFromDb is null)
+            {
+                return NotFound();
+            }
+            return View(postFromDb);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Posts.Update(post);
+                _db.SaveChanges();
+                TempData["success"] = "Post successfully updated!";
+                return RedirectToAction("Index");
+            }
+
+            return View(post);
+        }
+
+        public IActionResult Delete(string? id)
+        {
+            if (id is null)
+            {
+                return NotFound();
+            }
+
+            var postFromDb = _db.Posts.Find(id);
+
+            if (postFromDb is null)
+            {
+                return NotFound();
+            }
+            return View(postFromDb);
+        }
+
+        [HttpPost, ActionName("Post")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(string? id)
+        {
+            var postFromDb = _db.Posts.Find(id);
+            if (postFromDb is null) return NotFound();
+
+            _db.Posts.Remove(postFromDb);
+            _db.SaveChanges();
+            TempData["success"] = "User removed successfully";
+            return RedirectToAction("Index");
+        }
     }
 }
