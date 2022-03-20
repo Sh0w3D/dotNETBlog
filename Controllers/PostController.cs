@@ -87,7 +87,7 @@ namespace dotNETBlog.Controllers
             return View(postFromDb);
         }
 
-        [HttpPost, ActionName("Post")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(string? id)
         {
